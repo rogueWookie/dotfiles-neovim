@@ -10,4 +10,27 @@ return {
 			})
 		end,
 	},
+    {
+        "MeanderingProgrammer/render-markdown.nvim",
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-tree/nvim-web-devicons",
+        },
+        config = function()
+            local config = require("render-markdown")
+            config.setup({
+                link = {
+                    enabled = false,
+                }
+            })
+        end
+    },
+    {
+        "andrewferrier/wrapping.nvim",
+        config = function()
+            require("wrapping").setup({
+                notify_on_switch = true
+            })
+        end
+    }
 }
