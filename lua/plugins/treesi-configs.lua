@@ -5,7 +5,8 @@ return
     config = function()
         local config = require("nvim-treesitter.configs")
         config.setup({
-            -- Automatically install parses when one isn't found
+            -- NOTE     I don't think ensure_installed is needed here if I have
+            --          auto_install to true ... ?
             auto_install = true,
             highlight = {enable = true},
             indent = {enable = true}

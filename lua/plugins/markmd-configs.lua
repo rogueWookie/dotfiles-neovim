@@ -31,6 +31,7 @@ return {
             require("wrapping").setup({
                 notify_on_switch = true
             })
+            vim.cmd("SoftWrapMode")
         end
     }
 }

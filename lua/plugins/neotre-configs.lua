@@ -9,7 +9,16 @@ return
             "MunifTanjim/nui.nvim",
     },
     config = function()
-        vim.keymap.set('n', '<leader>nt', ":Neotree filesystem reveal left<CR>")
+        vim.keymap.set('n', '<leader>nt', ":Neotree filesystem reveal left<CR>", {
+            noremap = true,
+            silent = true,
+            desc = "Open Neotree"
+        })
+        vim.keymap.set('n', '<leader>ne', ":Neotree close<CR>", {
+            noremap = true,
+            silent = true,
+            desc = "Close Neotree"
+        })
     end
 }
 

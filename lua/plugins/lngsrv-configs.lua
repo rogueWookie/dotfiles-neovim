@@ -18,23 +18,28 @@ return {
 		config = function()
 			local lspconfig = require("lspconfig")
 
-			-- Lua Language Server
+			-- Lua
 			lspconfig.lua_ls.setup({})
-			-- C/C++ Language Server
+			-- C/C++/Rust
 			lspconfig.clangd.setup({})
-			-- Python Language Server
+			-- Python
+            -- TODO     Need to figure out a language server for python
 			-- lspconfig.pyright.setup({})
 
-			-- :h vim.lsp.buf.hover
+            -- NOTE     Type :h for details (e.g. :h lsp.buf.hover)
 			vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, {
-				desc = "lsp.buf.hover",
+			    noremap = true,
+                silent = true,
+                desc = "lsp.buf.hover",
 			})
-			-- :h vim.lsp.buf.definition
 			vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, {
+                noremap = true,
+                silent = true,
 				desc = "lsp.buf.definition",
 			})
-			-- :h vim.lsp.buf.code_action
 			vim.keymap.set({ "n", "v" }, "<leader>lc", vim.lsp.buf.code_action, {
+                noremap = true,
+                silent = true,
 				desc = "lsp.buf.code_action",
 			})
 		end,

@@ -1,6 +1,5 @@
 return
 {
-    -- TODO  - test me
     "folke/todo-comments.nvim",
     dependencies =
     {

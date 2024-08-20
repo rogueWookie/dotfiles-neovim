@@ -5,7 +5,7 @@ return {
         priority = 1000,
         config = function()
             require("nord").setup({
-                vim.cmd.colorscheme("nord"),
+                -- vim.cmd.colorscheme("nord"),
             })
         end,
     },
@@ -16,9 +16,9 @@ return {
         priority = 1000,
         config = function()
             require("catppuccin").setup({
-                flavour = "mocha"
+                flavour = "frappe"
             })
-            -- vim.cmd("colorscheme catppuccin")
+            vim.cmd("colorscheme catppuccin")
         end,
     },
 }
