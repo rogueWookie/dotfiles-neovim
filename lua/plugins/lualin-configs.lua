@@ -1,3 +1,4 @@
+-- TODO     Need to find a better way to sync lualine theme to nvim theme
 return
 {
     "nvim-lualine/lualine.nvim",

@@ -32,6 +32,11 @@ return {
             silent = true,
             desc = "dapui.close"
         })
+        -- TODO     Need to find better way to sync colors with nvim scheme and
+        --          only change colors when in debug mode vs changing them all
+        --          the time? Maybe not though, changing the globals really 
+        --          was an improvement over the defaults. Still should sync to
+        --          the nvim global theme though.
 		vim.api.nvim_set_hl(0, "SignColumn", { fg = "#b48ead", bg = "#2e3440", bold = true })
 		vim.api.nvim_set_hl(0, "debugPC", { bg = "#3b4252" })
 

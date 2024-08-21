@@ -1,3 +1,4 @@
+-- TODO     Need to find a better way to flip on/off schemes
 return {
     {
         "gbprod/nord.nvim",
