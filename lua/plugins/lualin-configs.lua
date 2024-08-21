@@ -9,8 +9,8 @@ return
         require('lualine').setup({
             options =
             {
-                -- theme = "nord",
-                theme = "dracula",
+                theme = "nord",
+                -- theme = "dracula",
             }
         })
     end
