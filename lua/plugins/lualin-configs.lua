@@ -1,4 +1,3 @@
--- TODO     Need to find a better way to sync lualine theme to nvim theme
 return
 {
     "nvim-lualine/lualine.nvim",
@@ -7,11 +6,13 @@ return
         "nvim-tree/nvim-web-devicons"
     },
     config = function()
+        local lua_utils = require("plugins.utils.lualin-utils")
+        lua_utils.setup()
+
         require('lualine').setup({
             options =
             {
-                theme = "nord",
-                -- theme = "dracula",
+                theme = "nord"
             }
         })
     end

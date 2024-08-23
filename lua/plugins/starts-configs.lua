@@ -23,6 +23,11 @@ return {
             dashb.button("f", "  > Find file", ":Telescope find_files<CR>"),
             dashb.button("g", "  > Live grep", ":Telescope live_grep<CR>"),
         }
+
+        local ver = vim.version()
+        dashb.section.footer.val = {
+            "Neovim Version: " .. ver.major .. "." .. ver.minor .. "." .. ver.patch,
+        }
         alpha.setup(dashb.opts)
         vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
     end,

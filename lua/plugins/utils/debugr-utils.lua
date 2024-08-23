@@ -1,9 +1,5 @@
--- NOTE     This module overrides DAP UI's style symbols through creating a 
---          custom highlight group. Custom highlight group inherits from
---          special DAP UI highlight groups that provide more prominent colors.
---          This ensures that if the underlying colorscheme changes then the 
---          right colors will always take affect that align with the underlying
---          colorscheme.
+-- NOTE     Overrides DAP UI's style symbols via creating a custom hl group
+--              - Overrides will dynamically adapt to changing colorschemes
 return {
 	setup = function()
 		local err_color = vim.api.nvim_get_hl_by_name("DapUIStop", true)

@@ -1,43 +1,49 @@
 return {
-	"nvimtools/none-ls.nvim",
-	config = function()
-		local null_ls = require("null-ls")
+    "nvimtools/none-ls.nvim",
+    config = function()
+        local null_ls = require("null-ls")
 
-		-- NOTE
-		--  -   Following packages installed via Mason and setup w/ null-ls
-		--  -   C/C++ Linting/Formatting already supported by clangd
-		--  -   Some builtins not support see follwing link for list
-		--      https://github.com/nvimtools/none-ls.nvim/discussions
+        -- NOTE
+        --  -   Following packages installed via Mason and setup w/ null-ls
+        --  -   C/C++ Linting/Formatting already supported by clangd
+        --  -   Some builtins not support see follwing link for list
+        --      https://github.com/nvimtools/none-ls.nvim/discussions
 
-		null_ls.setup({
-			sources = {
-				-- Lua Formatter
-				-- INFO     https://github.com/JohnnyMorganz/StyLua
-				null_ls.builtins.formatting.stylua,
+        null_ls.setup({
+            sources = {
 
-				-- Ruby Formatter, Linter and LSP
-				-- INFO     https://rubocop.org
-				null_ls.builtins.diagnostics.rubocop,
-				null_ls.builtins.formatting.rubocop,
+                -- Lua Formatter
+                -- INFO     https://github.com/JohnnyMorganz/StyLua
 
-				-- Mardown, YAML, JSON Formatter
-				-- INFO     https://prettier.io
-				-- NOTE     Requires npm and node installed to host
-				null_ls.builtins.formatting.prettier,
+                null_ls.builtins.formatting.stylua,
 
-				-- Python Formatter
-				-- INFO     hptts://pypi.org/project/black
-				null_ls.builtins.formatting.black,
-				-- INFO     https://pypi.org/project/isort
-				null_ls.builtins.formatting.isort,
-			},
-		})
+                -- Ruby Formatter, Linter and LSP
+                -- INFO     https://rubocop.org
 
-		--  Formatter
-		vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, {
+                null_ls.builtins.diagnostics.rubocop,
+                null_ls.builtins.formatting.rubocop,
+
+                -- Mardown, YAML, JSON Formatter
+                -- INFO     https://prettier.io
+                -- NOTE     Requires npm and node installed to host
+
+                null_ls.builtins.formatting.prettier,
+
+                -- Python Formatter
+                -- INFO     hptts://pypi.org/project/black
+
+                null_ls.builtins.formatting.black,
+
+                -- INFO     https://pypi.org/project/isort
+
+                null_ls.builtins.formatting.isort,
+            },
+        })
+
+        vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, {
             noremap = true,
             silent = true,
-			desc = "vim.lsp.buf.format",
-		})
-	end,
+            desc = "vim.lsp.buf.format",
+        })
+    end,
 }

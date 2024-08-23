@@ -18,6 +18,8 @@ return {
 				{ "<leader>t",  group = "Telescope" },
 				{ "<leader>f",  group = "Formatters" },
 				{ "<leader>n",  group = "NeoTree", icon = "" },
+                { "<leader>c",  group = "ColorScheme", icon = "󰌁" },
+                { "<leader>u",  group = "LuaLineColors", icon = "󰁲" },
 			},
 		})
 	end,

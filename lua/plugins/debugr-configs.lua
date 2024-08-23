@@ -12,6 +12,7 @@ return {
 		local dap_python = require("dap-python")
 
         -- Custom Keymaps
+
 		vim.keymap.set("n", "<leader>due", dapui.close, {
 			noremap = true,
 			silent = true,
@@ -50,6 +51,7 @@ return {
 
 		-- DAP UI Config & Listerns
         -- NOTE     It's nice to have DAP UI attach & pop open automatically
+
 		dapui.setup()
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
@@ -59,14 +61,17 @@ return {
 		end
 
         -- Utilities Configuration
+
         utils.setup()
 
 		-- Python DAP Config
+
 		dap_python.setup("python")
 
 		-- C/C++/Rust DAP Configuration
 		-- INFO     grap vadimcn/codelldp release from github, update PATH
 		-- INFO     Go to nvim-dap wiki, refer "C/C++/Rust (via codelldb)"
+
 		dap.adapters.codelldb = {
 			type = "server",
 			port = "${port}",
@@ -75,6 +80,7 @@ return {
 				args = { "--port", "${port}" },
 			},
 		}
+
 		dap.configurations.cpp = {
 			{
 				name = "Launch file",
@@ -87,6 +93,7 @@ return {
 				stopOnEntry = false,
 			},
 		}
+
 		dap.configurations.c = dap.configurations.cpp
 		dap.configurations.rust = dap.configurations.cpp
 	end,
