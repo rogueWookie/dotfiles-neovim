@@ -1,7 +1,12 @@
--- NOTE     Overrides DAP UI's style symbols via creating a custom hl group
---              - Overrides will dynamically adapt to changing colorschemes
-
+-- ABOUT    Custom DAP UI Overrides for styling symbols that appear in the DAP
+--          UI (e.g. SignColumn, etc). Colors are inherited from other DAP UI
+--          hl groups which ensures colors are compatible with their underlying
+--          colorscheme should the colorscheme update.
+--
+--          setup   Called from debugr-configs.lua
 return {
+
+    -- ------------------------------------------------------------------------
 	setup = function()
 		local err_color = vim.api.nvim_get_hl_by_name("DapUIStop", true)
 

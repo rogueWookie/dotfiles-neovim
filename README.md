@@ -5,7 +5,6 @@ A collection of [neovim](https://neovim.io) configuration files written in [Lua]
 | config             | global/plugin/utility | desc/url                                                                          |
 | ------------------ | --------------------- | --------------------------------------------------------------------------------- |
 | vimall-configs.lua | global                |                                                                                   |
-| cursor-configs.lua | plugin                | [Smooth Cursor](https://github.com/gen740/SmoothCursor.nvim)                      |
 | debugr-configs.lua | plugin                | [Neovim DAP](https://github.com/mfussenegger/nvim-dap)                            |
 |                    |                       | [Neovim DAP UI](https://github.com/rcarriga/nvim-dap-ui)                          |
 |                    |                       | [Asynchronous I/O](https://github.com/nvim-neotest/nvim-nio)                      |
@@ -22,6 +21,7 @@ A collection of [neovim](https://neovim.io) configuration files written in [Lua]
 |                    |                       | [Plenary](https://github.com/nvim-lua/plenary.nvim)                               |
 |                    |                       | [Web Devicons](https://github.com/nvim-tree/nvim-web-devicons)                    |
 |                    |                       | [Neovim UI Component Library](https://github.com/MunifTanjim/nui.nvim)            |
+| starts-configs.lua | plugin                | [alpha](https://github.com/goolord/alpha-nvim)                                    |
 | nonels-configs.lua | plugin                | [none-ls](https://github.com/nvimtools/none-ls.nvim)                              |
 | colors-configs.lua | plugin                | [Nord](https://github.com/nvimtools/none-ls.nvim)                                 |
 |                    |                       | [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim)                            |
@@ -35,4 +35,7 @@ A collection of [neovim](https://neovim.io) configuration files written in [Lua]
 | whichk-configs.lua | plugin                | [Whichkey](https://github.com/folke/which-key.nvim)                               |
 |                    |                       | [Mini Icons](https://github.com/echasnovski/mini.icons)                           |
 |                    |                       | [Web Devicons](https://github.com/nvim-tree/nvim-web-devicons)                    |
-| debugr-utils.lua   | utility               | custom                                                                            | 
+| colors-utils.lua   | utility               | Realtime colorscheme toggling                                                     |
+| debugr-utils.lua   | utility               | Custom DAP UI overrides of symbols and colors                                     |
+| lualin-utils.lua   | utility               | Realtime colorscheme toggling of LuaLine                                          |
+| states-utils.lua   | utility               | Custom State Manipulation API                                                     |

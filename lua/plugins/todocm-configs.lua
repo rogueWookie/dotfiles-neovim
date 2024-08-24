@@ -1,15 +1,12 @@
-return
-{
+return {
     "folke/todo-comments.nvim",
-    dependencies =
-    {
-        "nvim-lua/plenary.nvim"
+    dependencies = {
+        "nvim-lua/plenary.nvim",
     },
-    opts =
-    {
-        highlight =
-        {
-            pattern = [[.*<(KEYWORDS)\s*]]
-        }
-    }
+    opts = {
+        keywords = { ABOUT = {icon="", color="info"}},
+        highlight = {
+            pattern = [[.*<(KEYWORDS)\s*]],
+        },
+    },
 }

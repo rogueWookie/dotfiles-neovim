@@ -6,7 +6,6 @@ return {
 		priority = 1000,
 		config = function()
 			require("nord").setup({})
-			require("plugins.utils.colors-utils").set_colorscheme("nord")
 		end,
 	},
 	{

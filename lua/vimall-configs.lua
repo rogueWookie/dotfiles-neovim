@@ -1,5 +1,4 @@
 -- Cursor
--- TODO     Need to  move this to cursor-configs.lu
 vim.cmd("set guicursor=a:hor20-blinkwait0-blinkon500-blinkoff500")
 
 -- Tabs

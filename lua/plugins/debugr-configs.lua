@@ -11,8 +11,6 @@ return {
         local utils = require("plugins.utils.debugr-utils")
 		local dap_python = require("dap-python")
 
-        -- Custom Keymaps
-
 		vim.keymap.set("n", "<leader>due", dapui.close, {
 			noremap = true,
 			silent = true,

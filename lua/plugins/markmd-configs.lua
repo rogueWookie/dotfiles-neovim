@@ -25,15 +25,12 @@ return {
 			})
 		end,
 	},
-    -- TODO     Supress wrapping mode from showing in stdout
-    -- TODO     Fix this undefined global issue, surpressing for now
 	{
 		"andrewferrier/wrapping.nvim",
 		config = function()
 			require("wrapping").setup({
-				notify_on_switch = true,
+				notify_on_switch = false,
 			})
-			---@diagnostic disable-next-line: undefined-global
 			vim.cmd("SoftWrapMode")
 		end,
 	},
