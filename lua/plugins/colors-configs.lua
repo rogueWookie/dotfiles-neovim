@@ -1,4 +1,3 @@
-require("plugins.utils.colors-utils").setup()
 return {
 	{
 		"gbprod/nord.nvim",
@@ -6,6 +5,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("nord").setup({})
+            vim.cmd("colorscheme nord")
 		end,
 	},
 	{
@@ -14,6 +14,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("gruvbox").setup({})
+            -- vim.cmd("colorscheme gruvbox")
 		end,
 	},
 	{
@@ -23,6 +24,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({ flavour = "frappe" })
+            -- vim.cmd("colorscheme catppuccin")
 		end,
 	},
 }

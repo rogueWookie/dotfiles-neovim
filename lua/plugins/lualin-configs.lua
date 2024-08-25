@@ -1,4 +1,3 @@
-require("plugins.utils.lualin-utils").setup()
 return
 {
     "nvim-lualine/lualine.nvim",
@@ -11,6 +10,8 @@ return
             options =
             {
                 theme = "nord"
+                -- theme = "gruvbox"
+                -- theme = "dracula"
             }
         })
     end
