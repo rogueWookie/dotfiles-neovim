@@ -28,10 +28,10 @@ return {
             silent = true,
             desc = "dap.continue",
         })
-        vim.keymap.set("n", "<leader>ds", dap.stop, {
+        vim.keymap.set("n", "<leader>de", dap.close, {
             noremap = true,
             silent = true,
-            desc = "dap.stop",
+            desc = "dap.close",
         })
         vim.keymap.set("n", "<leader>di", dap.step_into, {
             noremap = true,
