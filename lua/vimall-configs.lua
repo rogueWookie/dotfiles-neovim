@@ -1,5 +1,8 @@
 -- Cursor
-vim.cmd("set guicursor=a:hor20-blinkwait0-blinkon500-blinkoff500")
+vim.cmd("set guicursor=n:block,v-i-r:hor20")
+
+-- 24-bit Color Support
+vim.cmd("set termguicolors")
 
 -- Tabs
 vim.cmd("set expandtab")
