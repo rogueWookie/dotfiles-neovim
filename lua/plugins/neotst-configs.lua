@@ -19,14 +19,12 @@ return {
 				}),
 			},
 		})
+
 		vim.keymap.set("n", "<leader>jf", function()
 			require("neotest").run.run(vim.fn.expand("%"))
-		end, { desc = "Run all tests" })
+		end, { noremap = true, silent = true, desc = "Run all tests" })
 		vim.keymap.set("n", "<leader>jo", function()
 			require("neotest").output.open({ enter = true })
-		end, { desc = "Open test output" })
-		-- vim.keymap.set("n", "<leader>jf", function()
-		-- 	require("neotest").output.open({ enter = true })
-		-- end, { desc = "Run nearest test in file" })
+		end, { noremap = true, silent = true, desc = "Open test output" })
 	end,
 }
